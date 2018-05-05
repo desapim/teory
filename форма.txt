@@ -1,0 +1,12 @@
+<?php
+
+$recepient = "desapim10@gmail.com";
+$sitename = "ÏÎÐÒÔÎËÈÎ";
+
+$name = trim($_POST["name"]); // name_ñïàâà_áåðåòñÿ_èç_html      NAME Ó INPUT = ÊÀÊ ID
+$phone = trim($_POST["phone"]);
+$describe = trim($_POST["describe"]);
+$message = "Èìÿ: $name \nÒåëåôîí: $phone \nÒåêñò: $describe";
+
+$pagetitle = "ÇÀßÂÊÀ ÁËÅÀÒ! \"$sitename\"";
+mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
